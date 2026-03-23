@@ -1,0 +1,28 @@
+# Arcane Emporium
+
+Uma loja virtual inspirada no universo de Arcane, com temática dividida entre Piltover e Zaun.
+
+## Sobre o projeto
+
+O **Arcane Emporium** é um projeto de e-commerce desenvolvido com o objetivo de praticar conceitos de desenvolvimento web, incluindo front-end e back-end com PHP.
+
+O sistema simula uma loja onde usuários podem visualizar produtos, navegar entre categorias e futuramente gerenciar um carrinho de compras.
+
+---
+
+##  Funcionalidades
+
+-  Página inicial com produtos em destaque
+-  Página de Piltover (itens tecnológicos)
+-  Página de Zaun (itens caóticos)
+-  Interface estilizada com tema da série
+-  Navegação entre páginas funcional
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML
+- CSS
+- PHP (em desenvolvimento)
+- MySQL (planejado)

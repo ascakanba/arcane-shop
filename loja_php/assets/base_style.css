@@ -1,0 +1,170 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0a0e14;
+    color: #e0e0e0;
+}
+
+/* Header & Navegação */
+header {
+    background: rgba(10, 14, 20, 0.95);
+    border-bottom: 2px solid #c8aa6e; /* Dourado Piltover */
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+nav {
+    display: flex;
+
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.logo {
+    left: 42%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #c8aa6e;
+    text-align: center;
+}
+
+.logo span {
+    color: #00bcff; /* Azul Hextec */
+}
+
+nav ul {
+    display: flex;
+    gap: 85%;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.alphacoders.com/119/1191831.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #00bcff;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00bcff;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background: #c8aa6e;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #00bcff;
+    box-shadow: 0 0 15px #00bcff;
+}
+
+/* Grid de Produtos */
+.container {
+    padding: 4rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #c8aa6e;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #151b23;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #00bcff;
+}
+
+.product-img {
+    height: 200px;
+    background: #222;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Cores representativas para os placeholders, deixar esses 3 padrões  e fé*/
+.hextech { background: radial-gradient(circle, #00bcff, #051923); }
+.gauntlets { background: radial-gradient(circle, #c8aa6e, #1a150e); }
+.shimmer { background: radial-gradient(circle, #a332ff, #1c0a2e); }
+
+/* Botões dos produtos pra ver o preço e tals*/
+.price {
+    display: block;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #00bcff;
+    font-weight: bold;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #c8aa6e;
+    color: #c8aa6e;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #c8aa6e;
+    color: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #05070a;
+    font-size: 0.9rem;
+    color: #666;
+}

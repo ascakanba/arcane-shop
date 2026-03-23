@@ -1,0 +1,311 @@
+/* Variáveis de cores - Tema Zaun */
+:root {
+  --zaun-bg: #0a0e0f;
+  --zaun-primary: #61ccf3;
+  --zaun-accent: #00ff55;
+  --zaun-secondary: #1a2a2f;
+  --zaun-border: #1f4d5c;
+  --zaun-text: #e0e0e0;
+  --zaun-glow: rgba(97, 204, 243, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container_zaun {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.welcome_row {
+  margin-bottom: 20px;
+}
+
+.ekko_house {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid var(--zaun-primary);
+  box-shadow: 0 0 20px var(--zaun-glow);
+}
+.zaun_page {
+  background: linear-gradient(135deg, #0a0e0f 0%, #1a2a2f 50%, #0f1618 100%);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--zaun-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.zaun_history {
+  text-align: center;
+  font-size: 120%;
+  padding: 20px;
+  border: 2px solid var(--zaun-border);
+  border-radius: 8px;
+  background: rgba(16, 22, 18, 0.6);
+  box-shadow: 0 0 20px var(--zaun-glow), inset 0 0 15px rgba(0, 255, 85, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  flex: 1;
+  min-width: 300px;
+}
+
+.zaun_history:hover {
+  border-color: var(--zaun-primary);
+  box-shadow: 0 0 30px var(--zaun-glow), inset 0 0 20px rgba(0, 255, 85, 0.15);
+  transform: translateY(-2px);
+}
+
+.welcome {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--zaun-text);
+  text-shadow: 0 0 10px rgba(0, 255, 85, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.welcome span {
+  color: var(--zaun-primary);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(97, 204, 243, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(97, 204, 243, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(97, 204, 243, 0.8), 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.painel {
+  padding: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--zaun-accent);
+  background: linear-gradient(90deg, rgba(16, 22, 18, 0.8) 0%, rgba(26, 42, 47, 0.5) 100%);
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(0, 255, 85, 0.2);
+  transition: all 0.3s ease;
+}
+
+ /* Container Principal  */
+.zaun_container {
+  padding: 3rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--zaun-primary);
+  text-shadow: 0 0 20px var(--zaun-glow);
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  animation: title-glow 3s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+  0%, 100% {
+    text-shadow: 0 0 20px var(--zaun-glow);
+  }
+  50% {
+    text-shadow: 0 0 40px var(--zaun-glow), 0 0 60px rgba(97, 204, 243, 0.5);
+  }
+}
+
+/* Grid de Produtos Zaun  */
+.zaun_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  animation: fade-in 0.8s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ /* Card Individual  */
+.zaun_card {
+  background: linear-gradient(135deg, rgba(26, 42, 47, 0.6) 0%, rgba(16, 22, 18, 0.8) 100%);
+  border: 2px solid var(--zaun-border);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0, 255, 85, 0.1);
+}
+
+.zaun_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(97, 204, 243, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.zaun_card:hover {
+  border-color: var(--zaun-primary);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px var(--zaun-glow), 
+              inset 0 0 20px rgba(0, 255, 85, 0.15),
+              0 10px 35px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, rgba(31, 77, 92, 0.8) 0%, rgba(26, 42, 47, 0.9) 100%);
+}
+
+.zaun_card:hover::before {
+  left: 100%;
+}
+ /* Ícone do Card   */
+.zaun_card_icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  background: radial-gradient(circle, rgba(0, 255, 85, 0.2), rgba(97, 204, 243, 0.1));
+  border: 2px solid var(--zaun-primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px var(--zaun-glow), inset 0 0 15px rgba(0, 255, 85, 0.1);
+}
+
+.zaun_card:hover .zaun_card_icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 35px var(--zaun-glow), inset 0 0 25px rgba(0, 255, 85, 0.2);
+  border-color: var(--zaun-accent);
+}
+
+ /* Variações de Cores para Ícones   */
+.shimmer_icon {
+  background: radial-gradient(circle, rgba(161, 50, 255, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: #a332ff;
+}
+
+.powder_icon {
+  background: radial-gradient(circle, rgba(255, 100, 50, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: #ff6432;
+}
+
+.tech_icon {
+  background: radial-gradient(circle, rgba(0, 255, 85, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: var(--zaun-accent);
+}
+
+.hextech_fake {
+  background: radial-gradient(circle, rgba(200, 170, 110, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: #c8aa6e;
+}
+
+.vial_icon {
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: #00c8ff;
+}
+
+.metal_icon {
+  background: radial-gradient(circle, rgba(150, 150, 150, 0.3), rgba(97, 204, 243, 0.15));
+  border-color: #999;
+}
+
+ /* Títulos e Textos do Card   */
+.zaun_card h3 {
+  font-size: 1.3rem;
+  color: var(--zaun-primary);
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(97, 204, 243, 0.5);
+  transition: all 0.3s ease;
+}
+
+.zaun_card:hover h3 {
+  color: var(--zaun-accent);
+  text-shadow: 0 0 15px rgba(0, 255, 85, 0.6);
+  font-size: 1.4rem;
+}
+
+.zaun_card p {
+  color: var(--zaun-text);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  min-height: 50px;
+}
+ 
+.zaun_price {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--zaun-accent);
+  font-weight: bold;
+  margin: 15px 0;
+  text-shadow: 0 0 10px rgba(0, 255, 85, 0.4);
+  animation: price-pulse 2s ease-in-out infinite;
+}
+
+@keyframes price-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 85, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 85, 0.7);
+  }
+}
+
+.zaun_buy_btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid var(--zaun-accent);
+  color: var(--zaun-accent);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.zaun_buy_btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--zaun-accent);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.zaun_buy_btn:hover {
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 85, 0.8), inset 0 0 10px rgba(0, 255, 85, 0.3);
+  border-color: var(--zaun-primary);
+}
+
+.zaun_buy_btn:hover::before {
+  left: 0;
+}
