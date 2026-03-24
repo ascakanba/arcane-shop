@@ -19,12 +19,12 @@
     </section>
 
     <main class="zaun_container">
-        <h2 class="section_title">Produtos de Zaun</h2>
+        <h2 class="section_title">Maravilhas de Piltover</h2>
         <div class="zaun_products">
             <div class="zaun_card">
                 <div class="zaun_card_icon shimmer_icon"></div>
                 <h3>Cintila Pura</h3>
-                <p>A substância que flui pelas veias de Zaun. Potência inigualável.</p>
+                <p>A substância que flui pelas veias de Piltover. Potência inigualável.</p>
                 <span class="zaun_price">350 Créditos</span>
                 <button class="zaun_buy_btn">Obter Agora</button>
             </div>

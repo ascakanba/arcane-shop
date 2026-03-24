@@ -1,5 +1,4 @@
-<?php include '../include/header.php' ?>
-<?php $pagina = 'zaun';?>
+<?php include '../include/header.php' ?>    
 
 <body class="zaun_page">
     <section class="painel">
