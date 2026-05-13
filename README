@@ -13,14 +13,14 @@ O sistema simula uma loja onde usuários podem visualizar produtos, navegar entr
 ##  Funcionalidades
 
 -  Página inicial com produtos em destaque
--  Página de Piltover (itens tecnológicos)
--  Página de Zaun (itens caóticos)
+-  Página de Piltover 
+-  Página de Zaun 
 -  Interface estilizada com tema da série
 -  Navegação entre páginas funcional
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML
 - CSS
